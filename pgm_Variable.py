@@ -1,7 +1,7 @@
 import sys
 import datetime
 #-------------------------------Import Section Ends------------------------------#
-print ("Hello Subhojit - Today's Date is ",datetime.datetime.now());
+print ("Hello Subhojit - Today's Date is ",datetime.datetime.now(),"\nMy version is",sys.version);
 name=input("What is your Name?\n")
 message="Hello {}, Which type of operation you would like to perform? Select within STR,INT,FLOAT\n".format(name)
 var_type=input(message)
@@ -16,7 +16,9 @@ if var_type.upper()=="INT" or var_type.upper()=="FLOAT":
 #-------------------------------String Variable Section------------------------------#
 elif var_type.upper()=="STR":
     var_str1=input("Please provide your string\n")
-    var_position=input("Please enter the position of the string value you want to see\n")
+    var_len=len(var_str1)
+    message="Please enter the position, should be within {}, of the string value you want to see\n".format(var_len)
+    var_position=input(message)
     print("Your",var_position,"string value is",var_str1[int(var_position)])
 else:
     print("Invalid type of operation selected Bye!")
