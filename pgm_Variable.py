@@ -1,7 +1,8 @@
 import sys
 import datetime
 #-------------------------------Import Section Ends------------------------------#
-print ("Hello Subhojit - Today's Date is ",datetime.datetime.now(),"\nMy version is",sys.version);
+var_date=datetime.datetime.now()
+print ("Hello Subhojit - Today's Date is ",var_date.strftime("%c""%Z"),"\nMy version is",sys.version);
 name=input("What is your Name?\n")
 message="Hello {}, Which type of operation you would like to perform? Select within STR,INT,FLOAT\n".format(name)
 var_type=input(message)
